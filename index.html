@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OsteoAI - Predict Osteoporosis Risks with AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" class="bone-icon">
+                <path d="M18.5 5.5C19.8807 5.5 21 6.61929 21 8C21 8.92131 20.5015 9.72621 19.7497 10.1506C20.5015 10.575 21 11.3799 21 12.3012C21 13.6819 19.8807 14.8012 18.5 14.8012C18.1065 14.8012 17.7342 14.7103 17.4063 14.5492L14.7673 17.7027C15.1107 18.0673 15.3188 18.5582 15.3188 19.1C15.3188 20.4807 14.1995 21.6 12.8188 21.6C11.8975 21.6 11.0926 21.1015 10.6682 20.3497C10.2438 21.1015 9.4389 21.6 8.51759 21.6C7.13688 21.6 6.01758 20.4807 6.01758 19.1C6.01758 18.5582 6.22572 18.0673 6.56911 17.7027L3.93006 14.5492C3.60218 14.7103 3.23005 14.8012 2.83643 14.8012C1.45572 14.8012 0.336426 13.6819 0.336426 12.3012C0.336426 11.3799 0.834907 10.575 1.58668 10.1506C0.834907 9.72621 0.336426 8.92131 0.336426 8C0.336426 6.61929 1.45572 5.5 2.83643 5.5C3.23005 5.5 3.60218 5.59089 3.93006 5.75199L6.56911 2.5985C6.22572 2.23389 6.01758 1.743 6.01758 1.20121C6.01758 -0.179495 7.13688 -1.29879 8.51759 -1.29879C9.4389 -1.29879 10.2438 -0.800311 10.6682 -0.0485363C11.0926 -0.800311 11.8975 -1.29879 12.8188 -1.29879C14.1995 -1.29879 15.3188 -0.179495 15.3188 1.20121C15.3188 1.743 15.1107 2.23389 14.7673 2.5985L17.4063 5.75199C17.7342 5.59089 18.1065 5.5 18.5 5.5Z" fill="url(#paint0_linear)"/>
+                <defs>
+                    <linearGradient id="paint0_linear" x1="0.336426" y1="10.1506" x2="21" y2="10.1506" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00d2ff"/>
+                        <stop offset="1" stop-color="#3a7bd5"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span>OsteoAI</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+        </div>
+        <a href="#prediction-form" class="btn btn-primary">Launch App</a>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <div class="badge">🚀 Powered by Machine Learning</div>
+            <h1>Predict Your Bone Health <br><span class="gradient-text">Before It's Too Late</span></h1>
+            <p>Our intelligent system uses advanced clinical factors to evaluate your risk of Osteoporosis. Secure, fast, and clinically inspired AI assessment.</p>
+            <div class="hero-buttons">
+                <a href="#prediction-form" class="btn btn-lg btn-glow">Assess Your Risk →</a>
+                <a href="#how-it-works" class="btn btn-lg btn-outline">Learn More</a>
+            </div>
+            <div class="stats-row">
+                <div class="stat">
+                    <h3>98%</h3>
+                    <p>Accuracy Rate</p>
+                </div>
+                <div class="stat">
+                    <h3>10+</h3>
+                    <p>Clinical Features</p>
+                </div>
+                <div class="stat">
+                    <h3>Instant</h3>
+                    <p>Risk Evaluation</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="glass-card mockup-card">
+                <div class="mockup-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <!-- Actual Input Form -->
+                <form id="prediction-form" class="skeleton-ui actual-form">
+                    <h3 style="margin-bottom: 10px; font-size:1.2rem; color:var(--text-main);">Enter Details</h3>
+                    <div class="form-row">
+                        <input type="number" id="age" placeholder="Age" min="1" max="120" required>
+                        <select id="gender"><option value="" disabled selected>Gender</option><option>Female</option><option>Male</option></select>
+                    </div>
+                    <div class="form-row">
+                        <select id="hormonal"><option value="" disabled selected>Hormonal</option><option>Normal</option><option>Postmenopausal</option></select>
+                        <select id="body_weight"><option value="" disabled selected>Weight</option><option>Normal</option><option>Underweight</option><option>Overweight</option></select>
+                    </div>
+                    <div class="form-row">
+                        <select id="family_history"><option value="" disabled selected>Family History</option><option>No</option><option>Yes</option></select>
+                        <select id="prior_fracture"><option value="" disabled selected>Prior Fracture</option><option>No</option><option>Yes</option></select>
+                    </div>
+                    <div class="form-row">
+                        <select id="calcium"><option value="" disabled selected>Calcium</option><option>Adequate</option><option>Low</option></select>
+                        <select id="vitamin_d"><option value="" disabled selected>Vitamin D</option><option>Sufficient</option><option>Insufficient</option></select>
+                    </div>
+                    <div class="form-row">
+                        <select id="physical"><option value="" disabled selected>Activity</option><option>Active</option><option>Sedentary</option></select>
+                        <select id="smoking"><option value="" disabled selected>Smoking</option><option>No</option><option>Yes</option></select>
+                    </div>
+                    <button type="submit" class="skeleton-button" id="submit-btn">Predict Risk</button>
+
+                    <div id="result-display" style="display:none; text-align:center; margin-top:15px; padding:15px; border-radius:8px; background:rgba(255,255,255,0.05);">
+                        <h4 id="result-title" style="margin-bottom:5px; font-size:1.1rem;"></h4>
+                        <p id="result-desc" style="font-size:0.9rem; margin-bottom:5px;"></p>
+                        <div class="progress-bar-container" style="background:var(--surface-border); height:8px; border-radius:4px; overflow:hidden;">
+                            <div id="risk-progress" style="background:var(--primary); height:100%; width:0%; transition: width 1s;"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="floating-badge badge-1">🛡️ Low Risk</div>
+                <div class="floating-badge badge-2">📊 Cluster 2</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <h2 class="section-title">Why Choose <span class="gradient-text">OsteoAI?</span></h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Advanced ML Models</h3>
+                <p>Powered by tuned Logistic Regression and K-Means Clustering for both classification and segmentation.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Real-time Analysis</h3>
+                <p>Input your parameters and get an instant breakdown of your risk probability and personalized medical advice.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏥</div>
+                <h3>Clinical Factors</h3>
+                <p>Considers age, gender, hormonal changes, BMI, calcium intake, and family history for a robust analysis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-it-works-content">
+            <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <h3>Enter Your Details</h3>
+                    <p>Fill out a simple, intuitive form with your lifestyle and health history.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <h3>AI Processing</h3>
+                    <p>Our scaled machine learning pipeline processes your data in milliseconds.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <h3>Get Actionable Insights</h3>
+                    <p>Receive your risk probability, cluster grouping, and next steps to take.</p>
+                </div>
+            </div>
+        </div>
+        <div class="how-it-works-image">
+            <div class="glass-card data-card">
+                <div class="radar-scan"></div>
+                <div class="data-point point-1"></div>
+                <div class="data-point point-2"></div>
+                <div class="data-point point-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>OsteoAI © 2026 | Built for health innovation.</p>
+        <p class="disclaimer">Note: This is an AI prediction tool and does not substitute professional medical diagnosis.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
